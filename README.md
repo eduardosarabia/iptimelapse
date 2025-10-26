@@ -18,6 +18,10 @@ BASE_DIR="/home/timelapse/mycamera"
 SNAP_DIR="$BASE_DIR/img"                      # captures
 OUT_DIR="/var/www/html/timelapse/mycamera"    # videos
 
+Add permissions to the file
+
+_chmod +x timelapse.sh_
+
 Finally, you need to configure **CRONTAB** :
 
 Log in as ROOT and open crontab
