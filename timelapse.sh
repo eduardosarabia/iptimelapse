@@ -6,7 +6,7 @@ set -euo pipefail
 # CONFIGURACIÓN
 ############################
 # Tu cámara
-RTSP_URL="rtsp://snap:Makarr0n-KK@172.16.10.22:554/"
+RTSP_URL="rtsp://admin:admin@192.168.1.1:554/"
 
 # Carpetas
 BASE_DIR="/home/timelapse/estanque"
