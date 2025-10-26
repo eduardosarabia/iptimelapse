@@ -4,6 +4,10 @@
 
 First of all, create a directory to use, call it, for example "timelapse".
 
+Install ffmpeg
+
+_apt-get install ffmpeg_
+
 Download timelapse.sh to your working directory.
 
 Edit btimelapse.sh and change the following lines:
