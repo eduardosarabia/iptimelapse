@@ -4,11 +4,15 @@
 
 First of all, create a directory to use, call it, for example "timelapse".
 
-Then, enter this directory and create other called "img".
+Download timelapse.sh to your working directory.
 
-Copy the two files ( **snapshot.sh & timelapse.sh** ) into the directory "timelapse".
+Edit btimelapse.sh and change the following lines:
 
-Edit both files and replace the required fields as needed.
+RTSP_URL="rtsp://admin:admin@192.168.1.1/stream1" #change to fit your IP camera
+
+BASE_DIR="/home/timelapse/mycamera"
+SNAP_DIR="$BASE_DIR/img"                      # captures
+OUT_DIR="/var/www/html/timelapse/mycamera"    # videos
 
 Finally, you need to configure **CRONTAB** :
 
@@ -16,9 +20,9 @@ Log in as ROOT and open crontab
 
 _crontab -e_
 
-_\*/1 \* \* \* \* /PATH TO .sh FILES/snapshot.sh_
+_\*/1 \* \* \* \* /PATH TO .sh FILES/timelapse.sh capture_
 
-_0 \*/"X" \* \* \* sh /PATH TO .sh FILES/timelapse.sh #change "X" to make timelapse every X hours, as desired._
+_0 \*/"X" \* \* \* sh /PATH TO .sh FILES/timelapse.sh timelapse #change "X" to make timelapse every X hours, as desired._
 
 SAVE & EXIT
 
